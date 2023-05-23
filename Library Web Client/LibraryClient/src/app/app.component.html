@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <label id="book-label">Select a book to borrow</label>
+    <div class="container">
+      <input type="text" id="search-bar" placeholder="Search...">
+      <div class="books-container">
+        <div class="row" *ngFor="let book of books; let i = index" [ngClass]="{ 'clicked': isRowSelected(i) }" (click)="onRowClick(i)">
+            <div class="title">{{book.title}}</div>
+            <div class="author">{{book.author}}</div>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <button id="borrow" (click) = "onBorrowClick()">Borrow</button>
+      </div>
+    </div>
+</body>
+</html>

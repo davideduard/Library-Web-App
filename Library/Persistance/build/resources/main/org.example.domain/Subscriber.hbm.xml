@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="org.example.domain.Subscriber"
+           table="subscribers">
+
+        <id name="id" column="username" type="java.lang.String">
+        </id>
+
+        <property name="first_name" column="first_name"/>
+        <property name="last_name" column="last_name"/>
+        <property name="password" column="password"/>
+        <property name="address" column="address"/>
+        <property name="phone_number" column="phone_number"/>
+        <property name="social_security_number" column="social_security_number"/>
+    </class>
+</hibernate-mapping>

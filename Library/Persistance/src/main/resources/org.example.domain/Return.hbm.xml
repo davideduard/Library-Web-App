@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="org.example.domain.Return"
+           table="returns">
+
+        <id name="id" column="return_id" type="java.lang.Integer">
+            <generator class="identity"/>
+        </id>
+
+        <property name="librarian_id" column="librarian_id"/>
+        <property name="book_id" column="book_id"/>
+        <property name="subscriber_id" column="subscriber_id"/>
+    </class>
+</hibernate-mapping>

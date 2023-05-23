@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.books-container {
+    border: solid 1px;
+    width: 40vw;
+    height: 200px;
+    overflow-y: scroll;
+}
+
+#search-text {
+    width: 40vw;
+    border: transparent;
+    border-bottom: solid 2px;
+}
+
+ul {
+  list-style-type: none;  
+}
+
+li:hover{
+    background-color: rgba(189, 195, 199, 0.5);
+}
+

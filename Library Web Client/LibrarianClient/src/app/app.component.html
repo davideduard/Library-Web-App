@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+    <div class="label-container">
+      <label id="users-label">Subscribers</label>
+      <label id="books-label">Books borrowed</label>
+    </div>
+
+    <div class="main-container">
+      <div class="card" id="users-card">
+        <input type="text" id="search-bar" placeholder="Search...">
+        <div class="data-container">
+          <div class="row" *ngFor="let subscriber of subscribers; let i = index" [ngClass]="{ 'clicked': isRowSelected(i) }" (click)="onRowClick(i)">
+            <div class="first-name">{{subscriber.first_name}}</div>
+            <div class="last-name">{{subscriber.last_name}}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="books-card">
+        <input type="text" id="search-bar" placeholder="Search...">
+        <div class="data-container">
+          <div class="row" *ngFor="let book of books; let j = index" [ngClass]="{ 'clicked': isBookRowSelected(j) }" (click)="onBookRowClick(j)">
+            <div class="title">{{book.title}}</div>
+          </div>
+        </div>
+        <div class="button-container">
+          <button id="return" [ngClass]="{hidden: !showButton}" (click)="onReturnBtnClick()">Return</button>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
